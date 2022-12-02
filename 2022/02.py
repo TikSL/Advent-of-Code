@@ -2,7 +2,6 @@
 # Jour 2
 # https://adventofcode.com/2022/day/2
 
-
 # ------------------- Tâche 1 ------------------- #
 actions_adversaire = ['A', 'B', 'C']  # Pierre, Feuille, Ciseaux
 actions_joueur = ['X', 'Y', 'Z']  # Pierre, Feuille, Ciseaux
