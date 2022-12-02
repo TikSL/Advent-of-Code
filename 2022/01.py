@@ -1,6 +1,6 @@
 # ADVENT-OF-CODE 2022
 # Jour 1
-# https://adventofcode.com/2022/day/2
+# https://adventofcode.com/2022/day/1
 
 
 print(f'# ------------------------------------------------ #')
@@ -10,6 +10,7 @@ print(f'# ------------------------------------------------ #\n')
 
 
 # ------------------- Partie 1 ------------------- #
+print(f'# ------------------- Partie 1 ------------------- #')
 
 lutins = [0]
 
@@ -28,7 +29,6 @@ fichier.close()
 calories_max = max(lutins)
 index_lutin_max = lutins.index(calories_max)
 
-print(f'# ------------------- Partie 1 ------------------- #')
 print(f'Lutin le plus chargé : {index_lutin_max + 1} avec {calories_max} calories.')
 
 # ------------------- Partie 2 ------------------- #
