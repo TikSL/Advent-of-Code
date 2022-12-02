@@ -16,7 +16,7 @@ with open('02.txt', 'r') as fichier:
         score += joueur + 1
         if joueur == adversaire:
             score += 3
-        elif joueur == (adversaire % 3 + 1):
+        elif joueur == (adversaire + 1) % 3:
             score += 6
         else:
             score += 0
