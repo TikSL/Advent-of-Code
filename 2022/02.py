@@ -50,5 +50,6 @@ with open('02.txt', 'r') as fichier:
             score2 += 3
         score2 += joueur
 
+fichier.close()
 print(f'# ------------------- Partie 2 ------------------- #')
 print(f'Vous avez obtenu {score2} points.')
