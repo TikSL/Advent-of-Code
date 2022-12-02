@@ -35,13 +35,13 @@ print(f'Vous avez obtenu {score} points.')
 # ------------------- Partie 2 ------------------- #
 
 score2 = 0
-with open('test.txt', 'r') as fichier:
+with open('02.txt', 'r') as fichier:
     lignes = fichier.readlines()
     for ligne in lignes:
         adversaire = actions_adversaire.index(ligne[0])
         choix = actions_joueur.index(ligne[2])
         if choix == 0:  # défaite
-            joueur = (adversaire - 1) % 3 +1
+            joueur = (adversaire - 1) % 3 + 1
         elif choix == 2:  # victoire
             joueur = (adversaire + 1) % 3 + 1
             score2 += 6
