@@ -3,8 +3,6 @@
 
 Chaque dossier correspond à une année et contient mes solutions aux énigmes.
 
-- [2022](https://github.com/TikSL/Advent-of-Code/tree/main/2022)
-
 *Remarque* : les années précédentes arriveront aux fur et à mesure.
 
 ---
@@ -13,5 +11,7 @@ Chaque dossier correspond à une année et contient mes solutions aux énigmes.
 
 🔎 *Pour plus d'informations : [Advent Of Code](https://adventofcode.com/)*
 
+---
 
-<a href="https://adventofcode.com/2022"><img src="screen 03.png" width="80%" /></a>
+### [Advent of Code 2022](https://github.com/TikSL/Advent-of-Code/tree/main/2022)
+<a href="https://adventofcode.com/2022"><img src="screen.png" width="80%" /></a>
