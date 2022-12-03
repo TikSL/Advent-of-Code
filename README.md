@@ -12,7 +12,7 @@ Chaque dossier correspond à une année et contient mes solutions aux énigmes.
 ---
 
 ### [Advent of Code 2022](https://github.com/TikSL/Advent-of-Code/tree/main/2022)
-<a href="https://adventofcode.com/2022"><img src="screenshots/2022.png" /></a>
+<a href="https://adventofcode.com/2022"><img src="screenshots/2022.png" width="80%"  /></a>
 
 ### [Advent of Code 2021](https://github.com/TikSL/Advent-of-Code/tree/main/2021)
-<a href="https://adventofcode.com/2021"><img src="screenshots/2021.png" /></a>
+<a href="https://adventofcode.com/2021"><img src="screenshots/2021.png" width="80%"  /></a>
