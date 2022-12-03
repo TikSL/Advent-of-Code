@@ -2,7 +2,6 @@
 # Jour 03
 # https://adventofcode.com/2022/day/3
 
-
 print(f'# ------------------------------------------------ #')
 print(f'#             Advent Of Code 2022 - 03             #')
 print(f'#           Réorganisation des sacs à dos          #')

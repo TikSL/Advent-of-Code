@@ -2,7 +2,6 @@
 # Jour 1
 # https://adventofcode.com/2022/day/1
 
-
 print(f'# ------------------------------------------------ #')
 print(f'#             Advent Of Code 2022 - 01             #')
 print(f'#                     Calories                     #')
@@ -32,8 +31,7 @@ print(f'Le lutin le plus chargé à {max(lutins)} calories.')
 # ------------------- Partie 2 ------------------- #
 print(f'# ------------------- Partie 2 ------------------- #')
 
-lutins.sort()
-somme_calorie = sum(lutins[-3:])
-print(f'Total des calories des 3 premiers lutins : {somme_calorie}.')
+somme_calories = sum(lutins[-3:])
+print(f'Total des calories des 3 premiers lutins : {somme_calories}.')
 
 
