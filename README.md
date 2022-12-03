@@ -3,8 +3,6 @@
 
 Chaque dossier correspond à une année et contient mes solutions aux énigmes.
 
-*Remarque* : les années précédentes arriveront aux fur et à mesure.
-
 ---
 
 *Advent of code est un calendrier de l'avent créé par [Eric Wastl](https://twitter.com/ericwastl).*
@@ -14,4 +12,7 @@ Chaque dossier correspond à une année et contient mes solutions aux énigmes.
 ---
 
 ### [Advent of Code 2022](https://github.com/TikSL/Advent-of-Code/tree/main/2022)
-<a href="https://adventofcode.com/2022"><img src="screen.png" width="80%" /></a>
+<a href="https://adventofcode.com/2022"><img src="screenshots/2022.png" /></a>
+
+### [Advent of Code 2021](https://github.com/TikSL/Advent-of-Code/tree/main/2021)
+<a href="https://adventofcode.com/2021"><img src="screenshots/2021.png" /></a>
