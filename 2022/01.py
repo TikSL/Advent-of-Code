@@ -26,21 +26,14 @@ with open('01.txt', 'r') as fichier:
 
 fichier.close()
 
-calories_max = max(lutins)
-index_lutin_max = lutins.index(calories_max)
-
-print(f'Lutin le plus chargé : {index_lutin_max + 1} avec {calories_max} calories.')
+lutins.sort()
+print(f'Le lutin le plus chargé à {max(lutins)} calories.')
 
 # ------------------- Partie 2 ------------------- #
 print(f'# ------------------- Partie 2 ------------------- #')
 
-somme_calorie = 0
-for k in range(3):
-    calories_max = max(lutins)
-    somme_calorie += calories_max
-    index_lutin_max = lutins.index(calories_max)
-    print(f'Lutin {k+1} le plus chargé : {index_lutin_max + 1} avec {calories_max} calories.')
-    lutins = lutins[:index_lutin_max] + lutins[index_lutin_max+1:]
+lutins.sort()
+somme_calorie = sum(lutins[-3:])
 print(f'Total des calories des 3 premiers lutins : {somme_calorie}.')
 
 
