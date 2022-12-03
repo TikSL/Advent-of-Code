@@ -13,4 +13,5 @@ Chaque dossier correspond à une année et contient mes solutions aux énigmes.
 
 🔎 *Pour plus d'informations : [Advent Of Code](https://adventofcode.com/)*
 
-<a href="https://adventofcode.com"><img src="2022/calendar.svg" width="80%" /></a>
+
+<a href="https://adventofcode.com/2022"><img src="screen 03.png" width="80%" /></a>
