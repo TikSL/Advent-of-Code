@@ -64,4 +64,3 @@ with open('03.txt', 'r') as fichier:
 
 fichier.close()
 print(f'Somme des nouvelles priorités : {somme_prio}.')
-
