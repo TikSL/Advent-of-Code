@@ -13,26 +13,15 @@ print(f'# ------------------- Partie 1 ------------------- #')
 with open('06.txt', 'r') as fichier:
     signal = fichier.readlines()[0][:-1]
 
-print(signal)
-liste = []
-test = ''
-compteur = 0
-while len(liste) < 5:
-    lettre = signal[compteur]
-    if lettre in liste:
+    liste = []
+    compteur = 0
+    while len(liste) < 5:
+        lettre = signal[compteur]
         while lettre in liste:
             liste.remove(liste[0])
         liste.append(lettre)
-    else:
-        liste.append(lettre)
-    compteur += 1
-print(compteur - 1)
-
-
-
-
-
-
+        compteur += 1
+    print(compteur - 1)
 
 
 # ------------------- Partie 2 ------------------- #
@@ -41,17 +30,12 @@ print(f'# ------------------- Partie 2 ------------------- #')
 with open('06.txt', 'r') as fichier:
     signal = fichier.readlines()[0][:-1]
 
-print(signal)
-liste = []
-test = ''
-compteur = 0
-while len(liste) < 14:
-    lettre = signal[compteur]
-    if lettre in liste:
+    liste = []
+    compteur = 0
+    while len(liste) < 14:
+        lettre = signal[compteur]
         while lettre in liste:
             liste.remove(liste[0])
         liste.append(lettre)
-    else:
-        liste.append(lettre)
-    compteur += 1
-print(compteur)
+        compteur += 1
+    print(compteur)

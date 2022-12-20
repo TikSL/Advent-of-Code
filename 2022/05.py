@@ -14,17 +14,19 @@ nbr = 9
 
 with open('05.txt', 'r') as fichier:
     lignes = fichier.readlines()
-    liste = [[] for k in range(nbr)]
+
+    caisses = [[] for k in range(nbr)]
+
     k = 0
     while lignes[k][:-1] != '':
         for i in range(len(lignes[k][:-1])):
             caract = lignes[k][:-1][i]
             if caract not in [' ',  '[', ']']:
-                liste[(i-1)//4].append(caract)
+                caisses[(i - 1) // 4].append(caract)
         k += 1
 
     for _ in range(nbr):
-        liste[_].pop()
+        caisses[_].pop()
 
     for ligne in lignes[k+1:len(lignes)]:
         instruction = ligne[:-1].split(' ')
@@ -33,15 +35,11 @@ with open('05.txt', 'r') as fichier:
         arrivee = int(instruction[5]) - 1
 
         for _ in range(nombre):
-            transfert = liste[depart][0]
-            liste[depart].remove(transfert)
-            liste[arrivee] = list(transfert) + liste[arrivee]
+            transfert = caisses[depart][0]
+            caisses[depart].remove(transfert)
+            caisses[arrivee] = list(transfert) + caisses[arrivee]
 
-    affichage = ''
-    for k in range(nbr):
-        affichage += liste[k][0]
-
-    print(affichage)
+    print(f"Le haut des caisses donne : {''.join([caisses[k][0] for k in range(nbr)])}")
 
 # ------------------- Partie 2 ------------------- #
 print(f'# ------------------- Partie 2 ------------------- #')
@@ -50,18 +48,17 @@ nbr = 9
 
 with open('05.txt', 'r') as fichier:
     lignes = fichier.readlines()
-    liste = [[] for k in range(nbr)]
+    caisses = [[] for k in range(nbr)]
     k = 0
     while lignes[k][:-1] != '':
         for i in range(len(lignes[k][:-1])):
             caract = lignes[k][:-1][i]
             if caract not in [' ',  '[', ']']:
-                liste[(i-1)//4].append(caract)
+                caisses[(i - 1) // 4].append(caract)
         k += 1
 
     for _ in range(nbr):
-        liste[_].pop()
-    print(liste)
+        caisses[_].pop()
 
     for ligne in lignes[k+1:len(lignes)]:
         instruction = ligne[:-1].split(' ')
@@ -69,14 +66,8 @@ with open('05.txt', 'r') as fichier:
         depart = int(instruction[3]) - 1
         arrivee = int(instruction[5]) - 1
 
-        transfert = liste[depart][:nombre]
-        print(instruction)
-        print('yo', transfert)
-        liste[depart] = liste[depart][nombre:]
-        liste[arrivee] = transfert + liste[arrivee]
-        print(liste)
-    affichage = ''
-    for k in range(nbr):
-        affichage += liste[k][0]
+        transfert = caisses[depart][:nombre]
+        caisses[depart] = caisses[depart][nombre:]
+        caisses[arrivee] = transfert + caisses[arrivee]
 
-    print(affichage)
+    print(f"Le haut des caisses donne : {''.join([caisses[k][0] for k in range(nbr)])}")
