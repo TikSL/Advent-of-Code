@@ -15,6 +15,7 @@ for line in lines:
     game = game.replace("blue", "b")
     games.append(game)
 
+
 # Partie 1
 
 somme = 0

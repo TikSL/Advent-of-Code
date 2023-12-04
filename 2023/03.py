@@ -49,7 +49,7 @@ somme = 0
 
 for i, line in enumerate(lines):
     nombres = recuperer_nbr_ligne(line)
-    deja_vu = []
+
     for nombre in nombres:
         if est_valide(nombre[1], nombre[0], i, lines):
             somme += nombre[1]
