@@ -58,7 +58,6 @@ print(f"Partie 1 : {somme}")
 
 # Partie 2:
 
-
 def trouver_voisins(x, y):
     voisins = []
     for i in range(-1, 2):
