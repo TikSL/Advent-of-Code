@@ -24,25 +24,23 @@ def calculer_diff(liste:list):
         differences = []
         for i in range(1, len(liste[-1])):
             differences.append(liste[-1][i] - liste[-1][i-1])
-
         liste.append(differences)
     return liste
 
 def trouver_prochain(sequence):
     sequence = calculer_diff(sequence)
-    print(sequence)
     n = len(sequence)
     i = n-2
     while i >=0:
         sequence[i].append(sequence[i][-1] + sequence[i+1][-1])
-        # print(sequence)
         i-=1
     return sequence
 
 somme = 0
 for sequence in sequences:
     somme += trouver_prochain(sequence)[0][-1]
-print(somme)
+
+print(f"Partie 1 : {somme}")
 
 # Partie 2
 
@@ -56,16 +54,15 @@ for line in lines:
     sequences.append(seq)
 def trouver_precedent(sequence):
     sequence = calculer_diff(sequence)
-    print(sequence)
     n = len(sequence)
     i = n-2
     while i >=0:
         sequence[i] = [sequence[i][0] - sequence[i+1][0]] + sequence[i]
-        print(sequence)
         i-=1
     return sequence
 
 somme = 0
 for sequence in sequences:
     somme += trouver_precedent(sequence)[0][0]
-print(somme)
+
+print(f"Partie 2 : {somme}")

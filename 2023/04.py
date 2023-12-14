@@ -34,7 +34,7 @@ for carte in cartes:
     if nbr_ok != 0:
         somme += 2**(nbr_ok - 1)
 
-print(somme)
+print(f"Partie 1 : {somme}")
 
 
 # Partie 2
@@ -52,4 +52,5 @@ for i, carte in enumerate(cartes):
         somme += nbr_cartes[i]
         for k in range(nbr_ok):
             nbr_cartes[i + 1 + k] += nbr_cartes[i]
-print(sum(nbr_cartes))
+
+print(f"Partie 2 : {sum(nbr_cartes)}")
