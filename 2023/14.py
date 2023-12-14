@@ -41,18 +41,17 @@ def translater_matrice_ouest(matrice):
 
 
 def tilt(line: str):
-    if not "O" in line:
+    if "O" not in line:
         return line
 
-    if not "#" in line:
+    if "#" not in line:
         return "O" * line.count("O") + "." * line.count(".")
 
-    resultat = ""
     position_hash = []
     for i in range(len(line)):
         if line[i] == '#':
             position_hash.append(i)
-
+    resultat = ""
     current = 0
     for index_hash in position_hash:
         nbr_O = line[current:index_hash].count("O")
@@ -75,12 +74,12 @@ def tilt_matrice(matrice):
     return matrice_res
 
 
-
 def resultat(matrice):
     res = 0
     for i, ligne in enumerate(matrice):
         res += ligne.count("O") * (len(matrice[0]) - i)
     return res
+
 
 # Partie 1 :
 
@@ -100,8 +99,8 @@ def cycle_nord(map):
     map_t = translater_matrice_nord(map_t)
     return map_t
 
-def cycle_sud(map):
 
+def cycle_sud(map):
     map = translater_matrice_sud(map)
     map = tilt_matrice(map)
     map = translater_matrice_est(map)
@@ -109,9 +108,11 @@ def cycle_sud(map):
 
     return map
 
+
 def cycle_ouest(map):
     map = tilt_matrice(map)
     return map
+
 
 def cycle_est(map):
     map = translater_matrice_est(map)
@@ -119,35 +120,31 @@ def cycle_est(map):
     map = translater_matrice_est(map)
     return map
 
+
+def get_key(val, dico):
+    for key, value in dico.items():
+        if val == value:
+            return key
+
+
 nbr_cycles = 1000000000
 index_cycles = 0
 
 map = map_base
-for x in map : print(x)
-print("\n")
-map_prec = []
-while index_cycles < nbr_cycles and map_prec != map:
-    map_prec = map
-    if index_cycles%1000000 == 0:
-        print(index_cycles)
-    # print("\nCYCLE ", index_cycles + 1)
+
+dico_maps = {}
+index_repet = 0
+while index_cycles < nbr_cycles and map not in dico_maps.values():
+    dico_maps[index_cycles] = map
     map = cycle_nord(map)
-    # for x in map:
-    #     print(x)
-    # print("\n")
     map = cycle_ouest(map)
-    # for x in map:
-    #     print(x)
-    # print("\n")
     map = cycle_sud(map)
-    # for x in map:
-    #     print(x)
-    # print("\n")
     map = cycle_est(map)
-    # for x in map:
-    #     print(x)
-    # print("\n")
     index_cycles += 1
 
-res = resultat(map)
+index_repet = get_key(map, dico_maps)
+index_fin = (nbr_cycles - index_repet) % (index_cycles - index_repet)
+map_fin = dico_maps[index_fin + index_repet]
+res = resultat(map_fin)
+
 print(f"Partie 2 : {res}")
