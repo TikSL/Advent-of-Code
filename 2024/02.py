@@ -1,5 +1,11 @@
+# ADVENT-OF-CODE 2024
+# Jour 2
+# https://adventofcode.com/2024/day/2
+
+# --- Day 2: Red-Nosed Reports ---
+
+
 def is_safe(list):
-    print(list)
     if list != sorted(list) and list != sorted(list, reverse=True):
         return False
     for i in range(1, len(list)):
@@ -33,5 +39,5 @@ with open('02.txt', 'r') as file:
         if is_dampener_safe(line):
             cpt_2 += 1
 
-    print(cpt_1)
-    print(cpt_2)
+    print("Partie 1 : ",cpt_1)
+    print("Partie 2 : ",cpt_2)
