@@ -1,7 +1,6 @@
 # ADVENT-OF-CODE 2024
 # Jour 8
 # https://adventofcode.com/2024/day/8
-from collections import defaultdict
 
 # --- Day 8: Resonant Collinearity ---
 
