@@ -6,7 +6,7 @@
 
 grid = []
 
-with open('04.txt', 'r') as file:
+with open('input/04.txt', 'r') as file:
 
     lines = file.readlines()
     for j, line in enumerate(lines):

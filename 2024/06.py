@@ -7,7 +7,7 @@
 obstacles = []
 guard_pos = (0, 0)
 
-with open('06.txt') as file:
+with open('input/06.txt') as file:
     lines = file.readlines()
     for i, line in enumerate(lines):
         line = line.strip()

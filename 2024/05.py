@@ -4,7 +4,7 @@
 
 # --- Day 5: Print Queue ---
 
-with open('05.txt', 'r') as file:
+with open('input/05.txt', 'r') as file:
 
     rule_positions = {}
     updates = []
