@@ -2,7 +2,7 @@
 # Jour 10
 # https://adventofcode.com/2024/day/10
 
-# --- Day 10: ---
+# --- Day 10: Hoof It ---
 
 map = []
 with open("input/10.txt") as file:
