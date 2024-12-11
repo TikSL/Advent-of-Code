@@ -4,75 +4,104 @@
 
 # --- Day 9: Disk Fragmenter ---
 
-disk_flat = []
-disk_segmented = []
+def checksum(disk_zones):
+    return sum(zone[0] * k for zone in disk_zones for k in range(zone[2], zone[2] + zone[1]))
 
 with open("../inputs/09.txt") as file:
-    lines = file.readlines()
-    disk_map_flat = lines[0].strip()
-    disk_map_segmented = lines[0].strip()
-
-index_counter = 0
-is_filled_zone = True
-
-for char in disk_map_flat:
-    if is_filled_zone:
-        zone_data = [index_counter for _ in range(int(char))]
-        index_counter += 1
-        is_filled_zone = False
-    else:
-        zone_data = [None for _ in range(int(char))]
-        is_filled_zone = True
-
-    if zone_data:
-        disk_segmented.append(zone_data)
-    for item in zone_data:
-        disk_flat.append(item)
-
-def calculate_checksum(disk):
-    checksum_value = 0
-    for index, value in enumerate(disk):
-        checksum_value += (value or 0) * index
-    return checksum_value
+    disk_map = file.readlines()[0].strip()
 
 # Partie 1
-while None in disk_flat:
-    empty_space_index = disk_flat.index(None)
-    last_value = disk_flat[-1]
-    disk_flat[empty_space_index] = last_value
-    disk_flat.pop()
 
-print(f"Partie 1 : {calculate_checksum(disk_flat)}")
+disk = []
+disk_none = []
+value = 0
+index_zone = 0
+is_filled_zone = True
+
+for i, char in enumerate(disk_map):
+    nbr = int(char)
+    if is_filled_zone:
+        zone_data = (value, nbr, index_zone)
+        disk.append(zone_data)
+        value += 1
+    else:
+        if nbr != 0:
+            zone_none = (nbr, index_zone)
+            disk_none.append(zone_none)
+
+    is_filled_zone = not is_filled_zone
+    index_zone += nbr
+
+data_zones = disk.copy()
+none_zones = disk_none.copy()
+
+disk_final = []
+
+while none_zones:
+    zone_none = none_zones[0]
+    nbr_none = zone_none[0]
+    index_none = zone_none[1]
+
+    zone_data = data_zones[-1]
+    value_data = zone_data[0]
+    nbr_data = zone_data[1]
+    index_data = zone_data[2]
+
+    if index_none > index_data:
+        break
+    if nbr_data > nbr_none:
+        disk_final.append((value_data, nbr_none, index_none))
+        none_zones.pop(0)
+        data_zones.pop()
+        data_zones = data_zones + [(value_data, nbr_data - nbr_none, index_data)]
+
+    elif nbr_data == nbr_none:
+        disk_final.append((value_data, nbr_none, index_none))
+        none_zones.pop(0)
+        data_zones.pop()
+
+    else:
+        disk_final.append((value_data, nbr_data, index_none))
+        none_zones.pop(0)
+        none_zones = [(nbr_none - nbr_data, index_none + nbr_data)] + none_zones
+        data_zones.pop()
+
+print(f"Partie 1 : {checksum(disk_final) + checksum(data_zones)}")
 
 # Partie 2
-for i in range(len(disk_segmented)):
-    segment_index = len(disk_segmented) - i - 1
-    segment_to_move = disk_segmented[segment_index]
 
-    if segment_to_move[0] is not None:
-        segment_size = len(segment_to_move)
-        for previous_segment in disk_segmented[:segment_index]:
-            if previous_segment[0] is None and len(previous_segment) >= segment_size:
+data_zones = disk.copy()
+none_zones = disk_none.copy()
 
-                disk_segmented.remove(segment_to_move)
-                disk_segmented.insert(segment_index, [None for _ in range(segment_size)])
+disk_final = []
 
-                previous_segment_index = disk_segmented.index(previous_segment)
-                new_empty_segment = [None for _ in range(len(previous_segment) - segment_size)]
+for i in range(len(data_zones)):
+    zone_data = data_zones[len(data_zones) - i - 1]
 
-                disk_segmented.remove(previous_segment)
-                disk_segmented.insert(previous_segment_index, segment_to_move)
+    value_data = zone_data[0]
+    nbr_data = zone_data[1]
+    index_data = zone_data[2]
 
-                if new_empty_segment:
-                    disk_segmented.insert(previous_segment_index + 1, new_empty_segment)
+    found = False
+    for j, zone_none in enumerate(none_zones):
+
+        nbr_none = zone_none[0]
+        index_none = zone_none[1]
+        if index_none < index_data:
+            if nbr_none > nbr_data:
+                disk_final.append((value_data, nbr_data, index_none))
+                none_zones.remove(zone_none)
+                none_zones = none_zones[:j] + [(nbr_none - nbr_data, index_none + nbr_data)] + none_zones[j:]
+                found = True
                 break
 
+            elif nbr_data == nbr_none and index_none < index_data:
+                disk_final.append((value_data, nbr_data, index_none))
+                none_zones.remove(zone_none)
+                found = True
+                break
 
-def flatten_segmented_disk(segmented_disk):
-    flat_disk = []
-    for segment in segmented_disk:
-        flat_disk.extend(segment)
-    return flat_disk
+    if not found:
+        disk_final.append((value_data, nbr_data, index_data))
 
-flattened_disk = flatten_segmented_disk(disk_segmented)
-print(f"Partie 2 : {calculate_checksum(flattened_disk)}")
+print(f"Partie 2 : {checksum(disk_final)}")
