@@ -24,7 +24,7 @@ with open('input/01.txt', 'r') as file:
         diff = abs(liste_gauche[i] - liste_droite[i])
         sum_tot += diff
 
-    print(sum_tot)
+    print("Partie 1 : ",sum_tot)
 
 # --- Part Two ---
 
@@ -46,4 +46,4 @@ with open('input/01.txt', 'r') as file:
 
         somme += liste_droite.count(x)*x
 
-    print(somme)
+    print("Partie 2 : ",somme)
