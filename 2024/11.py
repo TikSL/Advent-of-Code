@@ -17,11 +17,9 @@ def solve(value, deep):
     elif value==0:
         ret = solve(1, deep-1)
     elif len(str(value))%2==0:
-        str1 = str(value)
-        left = str1[:len(str1)//2]
-        right = str1[len(str1)//2:]
-        left, right = (int(left), int(right))
-        ret = solve(left, deep-1) + solve(right, deep-1)
+        a = int(str(value)[:len(str(value))//2])
+        b = int(str(value)[len(str(value))//2:])
+        ret = solve(a, deep-1) + solve(b, deep-1)
     else:
         ret = solve(value*2024, deep-1)
     DicoValueDeep[(value,deep)] = ret
