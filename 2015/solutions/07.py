@@ -6,7 +6,7 @@
 
 # Partie 1
 liste = []
-lines = open('07.txt', 'r').readlines()
+lines = open('../inputs/07.txt', 'r').readlines()
 instructions = []
 dict_cables = {}
 for line in lines:

@@ -8,7 +8,7 @@
 
 compteur_nice = 0
 
-lines = open('05.txt', 'r').readlines()
+lines = open('../inputs/05.txt', 'r').readlines()
 
 
 def trois_voyelles(line):

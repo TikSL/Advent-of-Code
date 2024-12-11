@@ -6,7 +6,7 @@
 
 # Partie 1
 
-lines = open('06.txt', 'r').readlines()
+lines = open('../inputs/06.txt', 'r').readlines()
 
 def recup_instructions(lines):
     instructions = []

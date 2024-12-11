@@ -7,7 +7,7 @@
 # Partie 1
 from itertools import permutations
 
-lines = open('09.txt', 'r').readlines()
+lines = open('../inputs/09.txt', 'r').readlines()
 
 distances = {}
 lieux = []

@@ -6,7 +6,7 @@
 
 # Partie 1 et 2
 
-lines = open('02.txt', 'r').readlines()
+lines = open('../inputs/02.txt', 'r').readlines()
 dimensions = []
 for line in lines :
     dimensions.append(line.strip().split("x"))

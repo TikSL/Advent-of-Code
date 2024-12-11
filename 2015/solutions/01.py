@@ -6,7 +6,7 @@
 
 # Partie 1
 
-lines = open('01.txt', 'r').readlines()
+lines = open('../inputs/01.txt', 'r').readlines()
 
 etage = 0
 for caractere in lines[0]:
