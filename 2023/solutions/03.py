@@ -6,7 +6,7 @@
 
 # Partie 1
 
-lines = open('03.txt', 'r').readlines()
+lines = open('../inputs/03.txt', 'r').readlines()
 
 for i in range(len(lines)):
     lines[i] = "." + lines[i].strip() + "."

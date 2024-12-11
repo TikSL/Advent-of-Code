@@ -4,7 +4,7 @@
 
 # --- Day 8: Haunted Wasteland ---
 
-lines = open('08.txt', 'r').readlines()
+lines = open('../inputs/08.txt', 'r').readlines()
 
 # inputs découpé : plus simple
 

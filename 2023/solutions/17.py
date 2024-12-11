@@ -4,7 +4,7 @@
 
 # --- Day 17: Clumsy Crucible ---
 
-lines = open('17.txt', 'r').readlines()
+lines = open('../inputs/17.txt', 'r').readlines()
 map = [[int(x) for x in line.strip()] for line in lines]
 
 L = len(map)

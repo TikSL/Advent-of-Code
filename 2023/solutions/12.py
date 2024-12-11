@@ -4,7 +4,7 @@
 
 # --- Day 12: Hot Springs ---
 
-lines = open('12.txt', 'r').readlines()
+lines = open('../inputs/12.txt', 'r').readlines()
 lines = [x.strip() for x in lines]
 
 rows = []

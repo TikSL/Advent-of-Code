@@ -4,7 +4,7 @@
 
 # --- Day 16: The Floor Will Be Lava ---
 
-lines = [line.strip() for line in open('16.txt', 'r').readlines()]
+lines = [line.strip() for line in open('../inputs/16.txt', 'r').readlines()]
 map = [[x for x in line] for line in lines]
 
 global cases_vues

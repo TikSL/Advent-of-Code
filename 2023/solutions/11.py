@@ -6,7 +6,7 @@
 
 # Partie 1
 
-lines = open('11.txt', 'r').readlines()
+lines = open('../inputs/11.txt', 'r').readlines()
 
 univers = []
 for line in lines:

@@ -4,7 +4,7 @@
 
 # --- Day 5: If You Give A Seed A Fertilizer ---
 
-lines = open('05.txt', 'r').readlines()
+lines = open('../inputs/05.txt', 'r').readlines()
 
 maps = {}
 seeds = []

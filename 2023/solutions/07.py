@@ -4,7 +4,7 @@
 
 # --- Day 7: Camel Cards ---
 
-lines = open('07.txt', 'r').readlines()
+lines = open('../inputs/07.txt', 'r').readlines()
 
 mains_a_classer = []
 for line in lines:

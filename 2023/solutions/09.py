@@ -4,7 +4,7 @@
 
 # --- Day 9: Mirage Maintenance ---
 
-lines = open('09.txt', 'r').readlines()
+lines = open('../inputs/09.txt', 'r').readlines()
 
 sequences = []
 

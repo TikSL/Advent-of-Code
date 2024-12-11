@@ -4,7 +4,7 @@
 
 # --- Day 2: Cube Conundrum ---
 
-lines = open('02.txt', 'r').readlines()
+lines = open('../inputs/02.txt', 'r').readlines()
 games = []
 for line in lines:
     game = line.split(":")[1]

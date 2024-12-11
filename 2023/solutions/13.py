@@ -4,7 +4,7 @@
 
 # --- Day 13: Point of Incidence ---
 
-lines = open('13.txt', 'r').readlines()
+lines = open('../inputs/13.txt', 'r').readlines()
 
 patterns = []
 pattern = []

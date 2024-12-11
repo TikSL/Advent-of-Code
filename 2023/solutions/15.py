@@ -4,7 +4,7 @@
 
 # --- Day 15: Lens Library ---
 
-line = open('15.txt', 'r').readlines()[0].strip()
+line = open('../inputs/15.txt', 'r').readlines()[0].strip()
 sequence = line.split(",")
 
 def hash(step:str):

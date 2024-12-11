@@ -6,7 +6,7 @@
 
 # Partie 1
 
-lines = open('04.txt', 'r').readlines()
+lines = open('../inputs/04.txt', 'r').readlines()
 cartes = []
 for line in lines:
     carte = line.split(":")[1]

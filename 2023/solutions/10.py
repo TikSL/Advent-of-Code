@@ -4,7 +4,7 @@
 
 # --- Day 10: Pipe Maze ---
 
-lines = open('10.txt', 'r').readlines()
+lines = open('../inputs/10.txt', 'r').readlines()
 
 lines = ['.' + x.strip() + '.' for x in lines]
 n = len(lines[0])

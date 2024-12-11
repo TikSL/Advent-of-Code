@@ -4,7 +4,7 @@
 
 # --- Day 18: Lavaduct Lagoon ---
 
-lines = open('18.txt', 'r').readlines()
+lines = open('../inputs/18.txt', 'r').readlines()
 lines = [x.strip().split(" ") for x in lines]
 lines1 = [(x[0], int(x[1]), x[2]) for x in lines]
 

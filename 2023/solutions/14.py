@@ -4,7 +4,7 @@
 
 # --- Day 14: Parabolic Reflector Dish ---
 
-lines = open('14.txt', 'r').readlines()
+lines = open('../inputs/14.txt', 'r').readlines()
 
 map_base = []
 
