@@ -6,7 +6,7 @@
 
 operations = {}
 
-with open('input/07.txt', 'r') as file:
+with open('../inputs/07.txt', 'r') as file:
     lines = file.readlines()
     for line in lines:
         line = line.strip()

@@ -7,7 +7,7 @@
 sum_tot = 0
 liste_droite = []
 liste_gauche = []
-with open('input/01.txt', 'r') as file:
+with open('../inputs/01.txt', 'r') as file:
     lines = file.readlines()
     for line in lines:
         line = line[:-1]
@@ -31,7 +31,7 @@ with open('input/01.txt', 'r') as file:
 somme = 0
 liste_droite = []
 liste_gauche = []
-with open('input/01.txt', 'r') as file:
+with open('../inputs/01.txt', 'r') as file:
     lines = file.readlines()
     for line in lines:
         line = line[:-1]

@@ -4,7 +4,7 @@
 
 # --- Day 11: Plutonian Pebbles---
 
-stones = open("input/11.txt").readlines()[0]
+stones = open("../inputs/11.txt").readlines()[0]
 stones = [int(x) for x in stones.split()]
 
 DicoValueDeep = {}

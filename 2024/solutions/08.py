@@ -8,7 +8,7 @@ antennas = {}
 x_max = 0
 y_max = 0
 
-with open('input/08.txt', 'r') as file:
+with open('../inputs/08.txt', 'r') as file:
     lines = file.readlines()
     for y, line in enumerate(lines):
         for x, char in enumerate(line.strip()):

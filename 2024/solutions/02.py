@@ -24,7 +24,7 @@ def is_dampener_safe(list):
     return False
 
 
-with open('input/02.txt', 'r') as file:
+with open('../inputs/02.txt', 'r') as file:
     lines = file.readlines()
     cpt_1 = 0
     cpt_2 = 0

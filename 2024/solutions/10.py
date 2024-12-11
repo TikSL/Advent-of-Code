@@ -5,7 +5,7 @@
 # --- Day 10: Hoof It ---
 
 map = []
-with open("input/10.txt") as file:
+with open("../inputs/10.txt") as file:
     lines = file.readlines()
     for line in lines:
         line = line.strip()

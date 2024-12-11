@@ -23,7 +23,7 @@ def next_real_mul(line):
         else:
             return 0, 0, 4
 
-with open('input/03.txt', 'r') as file:
+with open('../inputs/03.txt', 'r') as file:
     lines = file.readlines()
     for line in lines:
         while 'mul(' in line:
@@ -40,7 +40,7 @@ with open('input/03.txt', 'r') as file:
 execute = True
 counter = 0
 
-with open('input/03.txt', 'r') as file:
+with open('../inputs/03.txt', 'r') as file:
     lines = file.readlines()
     for line in lines:
         while 'mul(' in line:

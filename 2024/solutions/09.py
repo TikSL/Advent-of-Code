@@ -7,7 +7,7 @@
 disk_flat = []
 disk_segmented = []
 
-with open("input/09.txt") as file:
+with open("../inputs/09.txt") as file:
     lines = file.readlines()
     disk_map_flat = lines[0].strip()
     disk_map_segmented = lines[0].strip()
