@@ -10,7 +10,7 @@ print(f'# ------------------------------------------------ #\n')
 # ------------------- Partie 1 ------------------- #
 print(f'# ------------------- Partie 1 ------------------- #')
 
-with open('10.txt', 'r') as fichier:
+with open('../inputs/10.txt', 'r') as fichier:
     lignes = fichier.readlines()
     valeurX = 1
     X = [1]
@@ -32,7 +32,7 @@ with open('10.txt', 'r') as fichier:
 # ------------------- Partie 2 ------------------- #
 print(f'# ------------------- Partie 2 ------------------- #')
 
-with open('10.txt', 'r') as fichier:
+with open('../inputs/10.txt', 'r') as fichier:
     lignes = fichier.readlines()
     valeurX = 1
     X = [1]

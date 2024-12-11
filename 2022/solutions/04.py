@@ -12,7 +12,7 @@ print(f'# ------------------- Partie 1 ------------------- #')
 
 recouvrements = 0
 
-with open('04.txt', 'r') as fichier:
+with open('../inputs/04.txt', 'r') as fichier:
     lignes = fichier.readlines()
 
     for ligne in lignes:
@@ -32,7 +32,7 @@ print(f'# ------------------- Partie 2 ------------------- #')
 
 recouvrements_partiels = 0
 
-with open('04.txt', 'r') as fichier:
+with open('../inputs/04.txt', 'r') as fichier:
     lignes = fichier.readlines()
 
     for ligne in lignes:

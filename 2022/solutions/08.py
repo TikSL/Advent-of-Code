@@ -10,7 +10,7 @@ print(f'# ------------------------------------------------ #\n')
 # ------------------- Partie 1 ------------------- #
 print(f'# ------------------- Partie 1 ------------------- #')
 
-with open('08.txt', 'r') as fichier:
+with open('../inputs/08.txt', 'r') as fichier:
     lignes = fichier.readlines()
     n = len(lignes[0])
     grille_visible = [[0 for _ in range(n-1)] for _ in range(n-1)]
@@ -55,7 +55,7 @@ def vue_arbre(h_arbre, liste):
     return n
 
 
-with open('08.txt', 'r') as fichier:
+with open('../inputs/08.txt', 'r') as fichier:
     lignes = fichier.readlines()
     n = len(lignes[0])
     grille_visible = [[0 for _ in range(n-1)] for _ in range(n-1)]

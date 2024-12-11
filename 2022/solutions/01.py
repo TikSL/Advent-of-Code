@@ -13,7 +13,7 @@ print(f'# ------------------- Partie 1 ------------------- #')
 
 lutins = [0]
 
-with open('01.txt', 'r') as fichier:
+with open('../inputs/01.txt', 'r') as fichier:
     lignes = fichier.readlines()
     for ligne in lignes:
         texte = ligne[:-1]

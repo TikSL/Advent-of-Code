@@ -12,7 +12,7 @@ print(f'# ------------------- Partie 1 ------------------- #')
 
 nbr = 9
 
-with open('05.txt', 'r') as fichier:
+with open('../inputs/05.txt', 'r') as fichier:
     lignes = fichier.readlines()
 
     caisses = [[] for k in range(nbr)]
@@ -46,7 +46,7 @@ print(f'# ------------------- Partie 2 ------------------- #')
 
 nbr = 9
 
-with open('05.txt', 'r') as fichier:
+with open('../inputs/05.txt', 'r') as fichier:
     lignes = fichier.readlines()
     caisses = [[] for k in range(nbr)]
     k = 0

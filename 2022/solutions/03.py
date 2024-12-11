@@ -23,7 +23,7 @@ def lettres_communes(mot1, mot2):
 
 somme_prio = 0
 
-with open('03.txt', 'r') as fichier:
+with open('../inputs/03.txt', 'r') as fichier:
     lignes = fichier.readlines()
     for ligne in lignes:
         texte = ligne[:-1]
@@ -41,7 +41,7 @@ print(f'# ------------------- Partie 2 ------------------- #')
 
 
 somme_prio = 0
-with open('03.txt', 'r') as fichier:
+with open('../inputs/03.txt', 'r') as fichier:
     lignes = fichier.readlines()
     mots_groupe = []
     n = len(lignes)

@@ -10,7 +10,7 @@ print(f'# ------------------------------------------------ #\n')
 # ------------------- Partie 1 ------------------- #
 print(f'# ------------------- Partie 1 ------------------- #')
 
-with open('06.txt', 'r') as fichier:
+with open('../inputs/06.txt', 'r') as fichier:
     signal = fichier.readlines()[0][:-1]
 
     liste = []
@@ -27,7 +27,7 @@ with open('06.txt', 'r') as fichier:
 # ------------------- Partie 2 ------------------- #
 print(f'# ------------------- Partie 2 ------------------- #')
 
-with open('06.txt', 'r') as fichier:
+with open('../inputs/06.txt', 'r') as fichier:
     signal = fichier.readlines()[0][:-1]
 
     liste = []

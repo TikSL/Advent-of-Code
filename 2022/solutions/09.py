@@ -14,7 +14,7 @@ print(f'# ------------------- Partie 1 ------------------- #')
 def distance (case1, case2):
     return max(abs(case2[0]-case1[0]), abs(case2[1]-case1[1]))
 
-with open('09.txt', 'r') as fichier:
+with open('../inputs/09.txt', 'r') as fichier:
     lignes = fichier.readlines()
 
     case_tete = (0, 0)

@@ -17,7 +17,7 @@ print(f'# ------------------- Partie 1 ------------------- #')
 
 score = 0
 
-with open('02.txt', 'r') as fichier:
+with open('../inputs/02.txt', 'r') as fichier:
     lignes = fichier.readlines()
     for ligne in lignes:
         adversaire = actions_adversaire.index(ligne[0])
@@ -39,7 +39,7 @@ print(f'# ------------------- Partie 2 ------------------- #')
 
 score = 0
 
-with open('02.txt', 'r') as fichier:
+with open('../inputs/02.txt', 'r') as fichier:
     lignes = fichier.readlines()
     for ligne in lignes:
 

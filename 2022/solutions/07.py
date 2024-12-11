@@ -25,7 +25,7 @@ def affichage(repo, compteur):
 # ------------------- Partie 1 ------------------- #
 print(f'# ------------------- Partie 1 ------------------- #')
 
-with open('07.txt', 'r') as fichier:
+with open('../inputs/07.txt', 'r') as fichier:
     lignes = fichier.readlines()
 
     arbre = {'nom': '/', 'liste_fichier': []}  # repertoire racine /
