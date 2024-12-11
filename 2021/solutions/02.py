@@ -13,7 +13,7 @@ print(f'# ------------------- Partie 1 ------------------- #')
 pos_horiz = 0
 pos_vert = 0
 
-with open('02.txt', 'r') as fichier:
+with open('../inputs/02.txt', 'r') as fichier:
     lignes = fichier.readlines()
     for ligne in lignes:
         ordre = ligne[:-1].split(' ')
@@ -37,7 +37,7 @@ pos_horiz = 0
 pos_vert = 0
 aim = 0
 
-with open('02.txt', 'r') as fichier:
+with open('../inputs/02.txt', 'r') as fichier:
     lignes = fichier.readlines()
     for ligne in lignes:
         ordre = ligne[:-1].split(' ')

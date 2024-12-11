@@ -10,7 +10,7 @@ print(f'# ------------------------------------------------ #\n')
 # ------------------- Partie 1 ------------------- #
 print(f'# ------------------- Partie 1 ------------------- #')
 
-with open('03.txt', 'r') as fichier:
+with open('../inputs/03.txt', 'r') as fichier:
     lignes = fichier.readlines()
     n = len(lignes[0][:-1])  # nombre de bits
     liste_0 = [0 for k in range(n)]  # compte le nombre de 0 de chaque colonne
@@ -59,7 +59,7 @@ def plus_present_colonne(liste, colonne):
 
 liste_O2 = []
 liste_CO2 = []
-with open('03.txt', 'r') as fichier:
+with open('../inputs/03.txt', 'r') as fichier:
     lignes = fichier.readlines()
     for ligne in lignes:
         liste_O2.append(ligne[:-1])

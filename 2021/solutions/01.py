@@ -10,7 +10,7 @@ print(f'# ------------------------------------------------ #\n')
 # ------------------- Partie 1 ------------------- #
 print(f'# ------------------- Partie 1 ------------------- #')
 
-with open('01.txt', 'r') as fichier:
+with open('../inputs/01.txt', 'r') as fichier:
     lignes = fichier.readlines()
     profondeur1 = int(lignes[0][:-1])
     compteur_plus_profond = 0
@@ -27,7 +27,7 @@ print(f'Le sonar a mesuré {compteur_plus_profond} descentes.')
 # ------------------- Partie 2 ------------------- #
 print(f'# ------------------- Partie 2 ------------------- #')
 
-with open('01.txt', 'r') as fichier:
+with open('../inputs/01.txt', 'r') as fichier:
     lignes = fichier.readlines()
 
     compteur_plus_profond = 0
