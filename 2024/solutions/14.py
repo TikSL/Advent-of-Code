@@ -8,38 +8,25 @@ robots = []
 with open("../inputs/14.txt") as file:
     lines = file.readlines()
     for line in lines:
-        line = line.strip()
-        line = line.split()
-        line[0] = line[0].replace('p=', '').split(',')
-        line[1] = line[1].replace('v=', '').split(',')
-        line[0] = [int(x) for x in line[0]]
-        line[1] = [int(x) for x in line[1]]
-        robots.append([line[0], line[1]])
+        line = line.strip().split()
+        pos = [int(x) for x in line[0].replace('p=', '').split(',')]
+        vel = [int(x) for x in line[1].replace('v=', '').split(',')]
+        robots.append([pos, vel])
 
-seconds = 100
 x_max = 101
 y_max = 103
 
-for s in range(seconds):
-    for i, robot in enumerate(robots):
-        print(i, robot)
-        #print(type(x) for x in robot)
-        x = robot[0][0]
-        y = robot[0][1]
-        vx = robot[1][0]
-        vy = robot[1][1]
-        x2, y2 = x+vx, y+vy
-        x2 = x2 % x_max
-        y2 = y2 % y_max
-        robots[i][0][0] = x2
-        robots[i][0][1] = y2
+seconds = 100
+for _ in range(seconds):
+    for robot in robots:
+        x, y = robot[0]
+        vx, vy = robot[1]
+        robot[0][0] = (x + vx) % x_max
+        robot[0][1] = (y + vy) % y_max
 
-
-print("######")
 q1, q2, q3, q4 = 0, 0, 0, 0
 for robot in robots:
-    x = robot[0][0]
-    y = robot[0][1]
+    x, y = robot[0]
     if x < x_max//2 and y < y_max//2:
         q1 += 1
     elif x > x_max//2 and y < y_max//2:
@@ -49,6 +36,34 @@ for robot in robots:
     elif x > x_max//2 and y > y_max//2:
         q4 += 1
 
-print(q1, q2, q3, q4)
 print(f"Partie 1 : {q1 * q2* q3* q4}")
-print(f"Partie 2 : {0}")
+
+# Partie 2
+def dessiner(robots_positions):
+    grid = [[' ' for _ in range(x_max)] for _ in range(y_max)]
+    for x, y in robots_positions:
+        grid[y][x] = '#'
+    print("\n".join("".join(row) for row in grid))
+
+
+s = 0
+nbr_robots_aligned = 10 # Enough to detect a tree
+found = False
+while not found:
+    s2 = s
+    s += 1
+
+    for robot in robots:
+        x, y = robot[0]
+        vx, vy = robot[1]
+        robot[0][0] = (x + vx) % x_max
+        robot[0][1] = (y + vy) % y_max
+
+    robot_positions = [(robot[0][0], robot[0][1]) for robot in robots]
+
+    for x, y in robot_positions:
+        if all((x, y + l) in robot_positions for l in range(nbr_robots_aligned)):
+            print(f"Partie 2 : {s+100}") # 100 in part 1
+            dessiner(robot_positions)
+            found = True
+            break
